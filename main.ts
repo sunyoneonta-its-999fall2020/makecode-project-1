@@ -2,6 +2,7 @@ sprites.onOverlap(SpriteKind.Food, SpriteKind.Player, function (sprite, otherSpr
     music.pewPew.play()
     mySprite.setPosition(randint(0, 100), randint(0, 100))
     mySprite2.setPosition(randint(0, 100), randint(0, 100))
+    info.changeScoreBy(1)
 })
 let mySprite2: Sprite = null
 let mySprite: Sprite = null
