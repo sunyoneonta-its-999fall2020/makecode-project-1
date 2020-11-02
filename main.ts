@@ -1,9 +1,13 @@
 sprites.onOverlap(SpriteKind.Food, SpriteKind.Player, function (sprite, otherSprite) {
     music.pewPew.play()
+    mySprite.setPosition(randint(0, 100), randint(0, 100))
+    mySprite2.setPosition(randint(0, 100), randint(0, 100))
 })
+let mySprite2: Sprite = null
+let mySprite: Sprite = null
 music.playMelody("C5 E G A G A B E ", 120)
 scene.setBackgroundColor(6)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     ..............bbbbbbb...........
     ...........bb66663333baa........
     .........bb3367776333663aa......
@@ -37,7 +41,7 @@ let mySprite = sprites.create(img`
     ..........eeeeee................
     ................................
     `, SpriteKind.Food)
-let mySprite2 = sprites.create(img`
+mySprite2 = sprites.create(img`
     e e e . . . . e e e . . . . 
     c d d c . . c d d c . . . . 
     c b d d f f d d b c . . . . 
@@ -53,6 +57,6 @@ let mySprite2 = sprites.create(img`
     . f d f f f d f f d f . . . 
     . f f . . f f . . f f . . . 
     `, SpriteKind.Player)
-mySprite.setPosition(10, 15)
+mySprite.setPosition(22, 25)
 mySprite2.setPosition(142, 100)
 controller.moveSprite(mySprite2, 100, 100)
